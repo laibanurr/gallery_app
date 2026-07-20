@@ -4,10 +4,7 @@ A Flutter photo gallery app built to practice slivers, nested scroll views, and 
 
 📱 **Demo:**
 
-
-
-https://github.com/user-attachments/assets/6cc1db1b-8579-4e20-afc3-17ea4f283fa8
-
+https://github.com/user-attachments/assets/b22b86ab-24d9-48b2-b6d5-f23ed8c9658d
 
 ## What I built
 
@@ -23,6 +20,7 @@ https://github.com/user-attachments/assets/6cc1db1b-8579-4e20-afc3-17ea4f283fa8
 - **Albums** — a 2-column folder grid with a fixed aspect ratio so titles/counts don't clip
 - **Stories** — a full-width vertical feed styled like a story/magazine layout
 - **Shared** — in progress
+- docs: optimize video and add gitattributes
 
 ## Known limitations
 - Shared tab is a placeholder for now — actively working on it
