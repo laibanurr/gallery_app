@@ -33,7 +33,7 @@ class _AlbumScreen2State extends State<AlbumScreen2> {
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   final folder = GalleryAppData.albumFolders1[index];
-                  return AlbumCover(
+                  return albumCover(
                     name: folder['name'] ?? 'Unnamed Folder',
                     count: folder['count'] ?? '0 Photos',
                     imagePath: folder['image']  ?? folder['image'] ?? 'assets/images/img1.jpg',
@@ -49,7 +49,7 @@ class _AlbumScreen2State extends State<AlbumScreen2> {
   }
 }
 
-Widget AlbumCover({
+Widget albumCover({
   required String name,
   required String count,
   required String imagePath,
