@@ -3,7 +3,6 @@
 A Flutter photo gallery app built to practice slivers, nested scroll views, and structuring a multi-screen app with proper bottom navigation — not just cramming everything into one file.
 
 📱 **Demo:**
-![Uploading gallery_small.gif…]()
 
 
 ## What I built
