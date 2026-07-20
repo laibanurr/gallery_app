@@ -3,14 +3,11 @@ import 'package:gallery_app/screens/albums_screen2.dart';
 import 'package:gallery_app/screens/pictures.dart';
 import 'package:gallery_app/screens/shared_screen.dart';
 import 'package:gallery_app/screens/stories.dart';
-
 class GalleryAppNaviBar extends StatefulWidget {
   const GalleryAppNaviBar({super.key});
-
   @override
   State<GalleryAppNaviBar> createState() => _GalleryAppNaviBarState();
 }
-
 class _GalleryAppNaviBarState extends State<GalleryAppNaviBar> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
@@ -35,25 +32,19 @@ class _GalleryAppNaviBarState extends State<GalleryAppNaviBar> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.photo_library_rounded), 
           label: 'Pictures',
-          // selectedIcon: Icon(Icons.photo),
           ),
-
            NavigationDestination(
              icon: Icon(Icons.folder_copy_rounded),
-            // selectedIcon: Icon(Icons.photo_album),
             label: 'Albums',
           ),
-          
            NavigationDestination(
             icon: Icon(Icons.auto_awesome_mosaic_rounded),
             label: 'Stories',
           ),
           NavigationDestination(
             icon: Icon(Icons.people_alt_rounded),
-            // selectedIcon: Icon(Icons.people),
             label: 'Shared',
           ),
-
         ],
       ),
     );

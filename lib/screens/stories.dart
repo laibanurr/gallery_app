@@ -44,10 +44,12 @@ class _StoriesScreenState extends State<StoriesScreen> {
               itemCount: GalleryAppData.storiesList1.length,
               itemBuilder: (context, index) {
                 final story = GalleryAppData.storiesList1[index];
-                return _storiesCover(
-                  story['imagePath'] as String,
-                  story['mainText'] as String,
-                  story['subText'] as String,
+                
+                  return StoryCoverCard(
+                     imagePath: story['imagePath'] as String,
+                     mainText: story['mainText'] as String,
+                      subText: story['subText'] as String,
+
                 );
               },
             ),
@@ -57,43 +59,51 @@ class _StoriesScreenState extends State<StoriesScreen> {
     );
   }
 }
+class StoryCoverCard extends StatelessWidget {
+  final String imagePath;
+  final String mainText;
+  final String subText;
 
-Widget _storiesCover(String imagePath, String mainText, String subText) {
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Container(
-      width: double.infinity,
-      height: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.04),
-            blurRadius: 24,
-            spreadRadius: 0,
-            offset: const Offset(0, 8),
-          ),
-        ],
-        image: DecorationImage(image: AssetImage(imagePath), fit: BoxFit.cover),
-      ),
-      clipBehavior: Clip.hardEdge,
-      child: Column(
-        mainAxisAlignment: .center,
-        crossAxisAlignment: .center,
-        children: [
-          Center(
-            child: Text(
-              mainText,
-              style: TextStyle(color: Colors.white, fontSize: 24,
-              letterSpacing: 0.3,
-              fontWeight:  FontWeight.w700),
+  const StoryCoverCard({
+    super.key,
+    required this.imagePath,
+    required this.mainText,
+    required this.subText,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: double.infinity,
+        height: 200,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.04), 
+              blurRadius: 24,
+              offset: const Offset(0, 8),
             ),
-          ),
-          SizedBox(height: 4),
-          Text(subText, style: TextStyle(color: Colors.white.withValues(alpha: 0.8), 
-          fontWeight: FontWeight.w500, fontSize: 19)),
-        ],
+          ],
+          image: DecorationImage(image: AssetImage(imagePath), fit: BoxFit.cover),
+        ),
+        clipBehavior: Clip.hardEdge,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(mainText, style: const TextStyle(
+              color: Colors.white, fontSize: 24,
+              letterSpacing: 0.3, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 4),
+            Text(subText, style: TextStyle(
+              color: Colors.white.withValues(alpha: 0.8),
+              fontWeight: FontWeight.w500, fontSize: 19)),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
