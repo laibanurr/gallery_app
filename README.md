@@ -1,10 +1,10 @@
 # Gallery App
-# Gallery App
 
 A Flutter photo gallery app built to practice slivers, nested scroll views, and structuring a multi-screen app with proper bottom navigation — not just cramming everything into one file.
 
 📱 **Demo:**
-![Gallery app demo](screenshots/demo.gif)
+![Uploading gallery_small.gif…]()
+
 
 ## What I built
 
@@ -14,7 +14,6 @@ A Flutter photo gallery app built to practice slivers, nested scroll views, and 
 - **Lazy loading throughout.** Grids and lists use builder delegates (`SliverChildBuilderDelegate`, `SliverList.builder`) so only visible items get built.
 - **Static in-app data source.** Photo paths and album/story metadata are centralized in one data file, kept out of the UI layer.
 
-## Screens
 ## Screens
 
 - **Pictures** — a 3-column grid grouped under month headers, scrolling under a collapsing app bar
