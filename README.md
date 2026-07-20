@@ -2,6 +2,16 @@
 # Custom Mobile Gallery Hub
 
 A photo gallery app I built to really get comfortable with slivers, scroll performance, and structuring a Flutter project the way you'd actually see it done in production — not just cramming everything into one screen file.
+- 📱 Check out the app in action:
+
+
+
+https://github.com/user-attachments/assets/cd78d8ae-b07d-4dbf-bd19-7c0cd0010a3d
+
+
+
+
+
 
 ### What I built
 
@@ -18,5 +28,10 @@ Instead of dumping all my logic into single files, I tried to split things the w
 - **Albums** — a 2-column layout for folders, with `childAspectRatio: 0.78` so the title and file count don't get squished or clipped.
 - **Stories** — a full-width list, styled to feel more like a magazine/story feed, with gradient overlays so text stays readable over any image.
 
----
 
+
+
+
+
+
+---
