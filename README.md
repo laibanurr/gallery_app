@@ -5,6 +5,10 @@ A Flutter photo gallery app built to practice slivers, nested scroll views, and 
 📱 **Demo:**
 
 
+
+https://github.com/user-attachments/assets/6cc1db1b-8579-4e20-afc3-17ea4f283fa8
+
+
 ## What I built
 
 - **Bottom navigation with preserved tab state.** Four tabs (Pictures, Albums, Stories, Shared) driven by `IndexedStack` inside a `NavigationBar` (Material 3), so switching tabs doesn't reset each screen's scroll position.
